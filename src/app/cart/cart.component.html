@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <h5 >Total price:{{totalpriceInt}} </h5>
+        <div *ngFor="let product of thProductList;index as i"  class="col-md-3 mt-3 text-center">
+            <div class="item border position-relative d-flex justify-content-center align-items-center flex-column">
+                <div class="d-flex flex-column justify-content-end align-items-center">
+                    <img [src]="product.image" class="w-50 mt-2" alt="product.title">
+                    <p>{{product.title}}</p> 
+                    <p>price : {{product.price}}</p>
+                    <div class="d-flex justify-content-between w-25">
+                        <p>{{product.rating.rate}}</p>
+                        <p>{{product.rating.count}}</p>
+                        <p></p>
+                    </div>
+                    <button type="button" (click)='deletItem(product)' class="btn btn-info m-2">delete</button>
+                </div>
+            </div>
+        </div>
+        <div class="w-75  text-center m-5 mx-auto">
+            <button type="button" *ngIf="thProductList.length != 0"   (click)='ramoveAllItems()' class="btn btn-warning w-50 m-2">delete</button>
+            
+        </div>
+    </div>
+    
+</div>  
+
+

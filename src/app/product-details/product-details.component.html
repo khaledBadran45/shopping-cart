@@ -1,0 +1,25 @@
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="item ml-auto">
+                    <div class="text-end m-5 ">
+                        <img [src]="productDtails.image" class="w-50"  alt="productDtails.title">
+                        <div class="text-end">
+                            <p>{{productDtails.title}}</p>
+                        </div>
+                        <div class="d-flex justify-content-around w ms-auto">
+                            <h5>price: </h5> 
+                            <h5 class="m">{{productDtails.price}}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="item m-5">
+                    <p>{{productDtails.description}}</p>
+                    <button routerLink="/cart" (click)="setLocalStorage(productDtails)" class="btn btn-info">addToCart</button>
+                </div>
+            </div>
+        </div>
+</div>
